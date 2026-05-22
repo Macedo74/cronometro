@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #737577;
+}
+
+.cronometro-container {
+    background-color: #ffffff;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #161616;          /* Um cinza escuro elegante em vez de preto total */
+    font-size: 1.5rem;    /* Define um tamanho harmônico para o título */
+    margin-bottom: 15px;  /* Cria um espaço de 15px entre o título e os números abaixo */
+}
+
+.display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    
+    /* Transforma o display em uma linha flexível e centralizada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Esta regra vai controlar especificamente as caixinhas <span> dos números */
+.display span {
+    /* Força cada par de números a ter exatamente 80 pixels de largura */
+    width: 75px; 
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    
+    /* Opcional: se achar que os números ficaram muito separados, 
+       diminua o width para 70px ou 75px */
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.botoes {
+    display: flex;          /* Transforma a caixinha dos botões em um imã */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px;               /* Cria um espacinho de 10px entre um botão e outro */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#btn-iniciar { background-color: #2ecc71; color: white; } /* Verde */
+#btn-pausar { background-color: #f1c40f; color: white; }  /* Amarelo */
+#btn-zerar { background-color: #e74c3c; color: white; }   /* Vermelho */
+
+#btn-iniciar:hover { background-color: #27ae60; }
+#btn-pausar:hover { background-color: #d4ac0d; }
+#btn-zerar:hover { background-color: #c0392b; }

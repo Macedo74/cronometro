@@ -97,8 +97,15 @@ button:active {
         font-size: 1.2rem;  /* Diminui um pouco o título superior */
     }
 
+    .botoes {
+        display: flex;          /* Garante que o flex está ativo aqui também */
+        flex-direction: column; /* Força os botões a ficarem em coluna (empilhados) */
+        width: 100%;            /* Faz o grupo de botões usar toda a largura disponível */
+        gap: 10px;              /* Dica extra: cria um espacinho show entre os botões empilhados */
+    }
+
     button {
-        padding: 10px 16px; /* Deixa os botões um pouco menores para caberem na linha */
-        font-size: 0.9rem;
+        width: 100%;            /* Faz cada botão ocupar a linha inteira */
+        padding: 14px;          /* Deixa o botão mais gordinho, melhor para tocar com o dedo */
     }
 }

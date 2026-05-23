@@ -15,10 +15,21 @@ body {
 
 .cronometro-container {
     background-color: #ffffff;
-    padding: 30px 50px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* Remove qualquer 'height' fixa (ex: height: 300px) se houver, 
+       deixando a caixa respirar naturalmente com um espaçamento interno bom */
+    height: auto; 
+    
+    /* Define uma largura firme para o PC */
+    width: 450px;
+        
 }
 
 h2 {
@@ -31,7 +42,7 @@ h2 {
     font-size: 3.5rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     
     /* Transforma o display em uma linha flexível e centralizada */
     display: flex;
@@ -63,7 +74,9 @@ button {
 .botoes {
     display: flex;          /* Transforma a caixinha dos botões em um imã */
     justify-content: center; /* Centraliza os botões horizontalmente */
-    gap: 10px;               /* Cria um espacinho de 10px entre um botão e outro */
+    gap: 15px;               /* Cria um espacinho de 10px entre um botão e outro */
+    /* Esta linha vai empurrar os botões para baixo, afastando-os do display */
+    margin-top: 35px;
 }
 
 button:active {

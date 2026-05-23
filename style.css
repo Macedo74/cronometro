@@ -109,48 +109,45 @@ button:active {
    CONFIGURAÇÕES PARA O CELULAR (MEDIA QUERY)
    ========================================================================== */
 @media (max-width: 420px) {
-
     .cronometro-container {
-        width: 90%;
-        /* Mesma largura para a caixa e os botões */
-        max-width: 360px;
-        margin: 0 auto;
-        /* Centraliza a caixinha na tela do celular */
-        padding: 25px 20px;
-        box-sizing: border-box;
+        width: 90%;         
+        max-width: 360px;   
+        margin: 0 auto;     
+        padding: 25px 0; 
+        box-sizing: border-box; 
+        
+        /* O SEGREDO: Sumir com a caixa branca e a sombra no celular */
+        background-color: transparent; 
+        box-shadow: none; 
+    }
+
+    /* Troca a cor dos textos para branco, já que o fundo agora é o preto do body */
+    h2 {
+        color: #ffffff; 
+        font-size: 1.2rem;  
     }
 
     .display {
-        font-size: 2.2rem;
-        /* Diminui os números para caber na caixinha */
+        color: #ffffff;
+        font-size: 2.5rem;  
     }
 
     .display span {
-        width: 50px;
-    }
-
-    h2 {
-        font-size: 1.1rem;
+        width: 55px;        
     }
 
     .botoes {
         display: flex;
-        flex-direction: column;
-        /* Botões um embaixo do outro */
-        width: 100%;
-        /* Ocupam toda a largura interna da caixa */
-        gap: 12px;
-        /* Espaço perfeito entre eles */
-        margin-top: 25px;
-        /* Mantém o afastamento do display no celular */
+        flex-direction: column; 
+        width: 100%;            
+        gap: 12px;              
+        margin-top: 30px;       
         box-sizing: border-box;
     }
 
     button {
-        width: 100%;
-        padding: 14px;
-        box-sizing: border-box;
+        width: 100%;            
+        padding: 14px;          
+        box-sizing: border-box; 
     }
 }
-
-/* <--- A CHAVE DO MEDIA QUERY FECHA SÓ AQUI NO FINAL! */

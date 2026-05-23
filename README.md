@@ -17,11 +17,8 @@ O projeto foi construído utilizando as seguintes tecnologias:
 *   **Design 100% Responsivo:** O layout se adapta perfeitamente a computadores, tablets e smartphones.
 *   **Controles Intuitivos:** Botões táteis com efeitos visuais ao passar o mouse (`:hover`) e ao clicar (`:active`).
 
-## 🔧 Como Executar o Projeto
+## 🔗 Link do Projeto
 
-Para testar o cronômetro localmente na sua máquina, siga os passos abaixo:
+Você pode testar o cronômetro funcionando na prática clicando no link abaixo:
 
-1. Clone este repositório:
-   
-```bash
-   git clone https://github.com/Macedo74/cronometro
+👉 [Clique aqui para acessar o Cronômetro Online](https://macedo74.github.io/cronometro/)

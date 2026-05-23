@@ -13,6 +13,10 @@ body {
     background-color: #0a0a0a;
 }
 
+/* ==========================================================================
+   CONFIGURAÇÕES PARA O PC (TELA GRANDE)
+   ========================================================================== */
+
 .cronometro-container {
     background-color: #ffffff;
     padding: 30px;
@@ -22,46 +26,40 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* Remove qualquer 'height' fixa (ex: height: 300px) se houver, 
-       deixando a caixa respirar naturalmente com um espaçamento interno bom */
     height: auto;
-
-    /* Define uma largura firme para o PC */
     width: 450px;
-    
+    /* Largura fixa e bonita no computador */
 }
 
 h2 {
     color: #161616;
-    /* Um cinza escuro elegante em vez de preto total */
     font-size: 1.2rem;
-    /* Define um tamanho harmônico para o título */
     margin-bottom: 15px;
-    /* Cria um espaço de 15px entre o título e os números abaixo */
 }
 
 .display {
     font-size: 3.5rem;
+    /* Números bem grandes no PC */
     font-weight: bold;
     color: #333;
-    margin-bottom: 40px;
-
-    /* Transforma o display em uma linha flexível e centralizada */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Esta regra vai controlar especificamente as caixinhas <span> dos números */
 .display span {
-    /* Força cada par de números a ter exatamente 80 pixels de largura */
     width: 75px;
     text-align: center;
     font-variant-numeric: tabular-nums;
+}
 
-    /* Opcional: se achar que os números ficaram muito separados, 
-       diminua o width para 70px ou 75px */
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Botões lado a lado no PC */
+    margin-top: 35px;
+    /* Empurra os botões para baixo, afastando do display */
 }
 
 button {
@@ -74,39 +72,25 @@ button {
     transition: background 0.2s, transform 0.1s;
 }
 
-.botoes {
-    display: flex;
-    /* Transforma a caixinha dos botões em um imã */
-    justify-content: center;
-    /* Centraliza os botões horizontalmente */
-    gap: 15px;
-    /* Cria um espacinho de 10px entre um botão e outro */
-    /* Esta linha vai empurrar os botões para baixo, afastando-os do display */
-    margin-top: 35px;
-}
-
 button:active {
     transform: scale(0.98);
 }
 
+/* Cores dos Botões e Efeitos Hover */
 #btn-iniciar {
     background-color: #2ecc71;
     color: white;
 }
 
-/* Verde */
 #btn-pausar {
     background-color: #f1c40f;
     color: white;
 }
 
-/* Amarelo */
 #btn-zerar {
     background-color: #e74c3c;
     color: white;
 }
-
-/* Vermelho */
 
 #btn-iniciar:hover {
     background-color: #27ae60;
@@ -120,53 +104,53 @@ button:active {
     background-color: #c0392b;
 }
 
-/* Quando a tela do aparelho for menor que 420 pixels (tamanho de celular) */
+
+/* ==========================================================================
+   CONFIGURAÇÕES PARA O CELULAR (MEDIA QUERY)
+   ========================================================================== */
 @media (max-width: 420px) {
+
     .cronometro-container {
-        /* A caixinha branca define a largura na tela do celular (90% da tela) */
-        width: 90%;         
-        max-width: 360px;   /* Evita que ela estique demais em celulares muito grandes */
-        margin: 0 auto;     /* Centraliza a caixinha perfeitamente na tela */
-        
-        /* Reduzimos o padding lateral para os botões ganharem mais espaço dentro dela */
-        padding: 25px 20px; 
-        
-        /* Garante que o container use o modelo de caixa correto para não vazar conteúdo */
-        box-sizing: border-box; 
+        width: 90%;
+        /* Mesma largura para a caixa e os botões */
+        max-width: 360px;
+        margin: 0 auto;
+        /* Centraliza a caixinha na tela do celular */
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
+
+    .display {
+        font-size: 2.2rem;
+        /* Diminui os números para caber na caixinha */
+    }
+
+    .display span {
+        width: 50px;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        /* Botões um embaixo do outro */
+        width: 100%;
+        /* Ocupam toda a largura interna da caixa */
+        gap: 12px;
+        /* Espaço perfeito entre eles */
+        margin-top: 25px;
+        /* Mantém o afastamento do display no celular */
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        box-sizing: border-box;
     }
 }
 
-.display {
-    font-size: 2.2rem;
-    /* Diminui um pouco o tamanho dos números */
-}
-
-.display span {
-    width: 50px;
-    /* Reduz a largura das "gavetas" invisíveis dos números */
-}
-
-h2 {
-    font-size: 1.2rem;
-    /* Diminui um pouco o título superior */
-}
-
-.botoes {
-    display: flex;
-    /* Garante que o flex está ativo aqui também */
-    flex-direction: column;
-    /* Força os botões a ficarem em coluna (empilhados) */
-    width: 100%;
-    /* Faz o grupo de botões usar toda a largura disponível */
-    gap: 12px;
-    /* Dica extra: cria um espacinho show entre os botões empilhados */
-    box-sizing: border-box;
-}
-
-button {
-    width: 100%;
-    /* Faz cada botão ocupar a linha inteira */
-    padding: 14px;
-    /* Deixa o botão mais gordinho, melhor para tocar com o dedo */
-    box-sizing: border-box; /* Impede que o padding jogue o botão para fora da caixa */
-}
+/* <--- A CHAVE DO MEDIA QUERY FECHA SÓ AQUI NO FINAL! */

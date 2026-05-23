@@ -24,4 +24,4 @@ Para testar o cronômetro localmente na sua máquina, siga os passos abaixo:
 1. Clone este repositório:
    
 ```bash
-   git clone https://github.com/Macedo74/cronometro.git
+   git clone https://github.com/Macedo74/cronometro

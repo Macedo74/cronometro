@@ -123,12 +123,16 @@ button:active {
 /* Quando a tela do aparelho for menor que 420 pixels (tamanho de celular) */
 @media (max-width: 420px) {
     .cronometro-container {
-        padding: 20px 15px;
-        /* Diminui a margem interna para sobrar mais espaço */
-        width: 90%;
-        /* A caixinha passa a ocupar 90% da largura da tela */
-        margin: 0 auto;
-        /* Zera em cima/baixo e centraliza perfeitamente nas laterais */
+        /* A caixinha branca define a largura na tela do celular (90% da tela) */
+        width: 90%;         
+        max-width: 360px;   /* Evita que ela estique demais em celulares muito grandes */
+        margin: 0 auto;     /* Centraliza a caixinha perfeitamente na tela */
+        
+        /* Reduzimos o padding lateral para os botões ganharem mais espaço dentro dela */
+        padding: 25px 20px; 
+        
+        /* Garante que o container use o modelo de caixa correto para não vazar conteúdo */
+        box-sizing: border-box; 
     }
 }
 
@@ -154,8 +158,9 @@ h2 {
     /* Força os botões a ficarem em coluna (empilhados) */
     width: 100%;
     /* Faz o grupo de botões usar toda a largura disponível */
-    gap: 10px;
+    gap: 12px;
     /* Dica extra: cria um espacinho show entre os botões empilhados */
+    box-sizing: border-box;
 }
 
 button {
@@ -163,4 +168,5 @@ button {
     /* Faz cada botão ocupar a linha inteira */
     padding: 14px;
     /* Deixa o botão mais gordinho, melhor para tocar com o dedo */
+    box-sizing: border-box; /* Impede que o padding jogue o botão para fora da caixa */
 }

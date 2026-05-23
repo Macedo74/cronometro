@@ -22,20 +22,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     /* Remove qualquer 'height' fixa (ex: height: 300px) se houver, 
        deixando a caixa respirar naturalmente com um espaçamento interno bom */
-    height: auto; 
-    
+    height: auto;
+
     /* Define uma largura firme para o PC */
     width: 450px;
-        
+    
 }
 
 h2 {
-    color: #161616;          /* Um cinza escuro elegante em vez de preto total */
-    font-size: 1.5rem;    /* Define um tamanho harmônico para o título */
-    margin-bottom: 15px;  /* Cria um espaço de 15px entre o título e os números abaixo */
+    color: #161616;
+    /* Um cinza escuro elegante em vez de preto total */
+    font-size: 1.2rem;
+    /* Define um tamanho harmônico para o título */
+    margin-bottom: 15px;
+    /* Cria um espaço de 15px entre o título e os números abaixo */
 }
 
 .display {
@@ -43,7 +46,7 @@ h2 {
     font-weight: bold;
     color: #333;
     margin-bottom: 40px;
-    
+
     /* Transforma o display em uma linha flexível e centralizada */
     display: flex;
     justify-content: center;
@@ -53,10 +56,10 @@ h2 {
 /* Esta regra vai controlar especificamente as caixinhas <span> dos números */
 .display span {
     /* Força cada par de números a ter exatamente 80 pixels de largura */
-    width: 75px; 
+    width: 75px;
     text-align: center;
     font-variant-numeric: tabular-nums;
-    
+
     /* Opcional: se achar que os números ficaram muito separados, 
        diminua o width para 70px ou 75px */
 }
@@ -72,9 +75,12 @@ button {
 }
 
 .botoes {
-    display: flex;          /* Transforma a caixinha dos botões em um imã */
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    gap: 15px;               /* Cria um espacinho de 10px entre um botão e outro */
+    display: flex;
+    /* Transforma a caixinha dos botões em um imã */
+    justify-content: center;
+    /* Centraliza os botões horizontalmente */
+    gap: 15px;
+    /* Cria um espacinho de 10px entre um botão e outro */
     /* Esta linha vai empurrar os botões para baixo, afastando-os do display */
     margin-top: 35px;
 }
@@ -83,42 +89,78 @@ button:active {
     transform: scale(0.98);
 }
 
-#btn-iniciar { background-color: #2ecc71; color: white; } /* Verde */
-#btn-pausar { background-color: #f1c40f; color: white; }  /* Amarelo */
-#btn-zerar { background-color: #e74c3c; color: white; }   /* Vermelho */
+#btn-iniciar {
+    background-color: #2ecc71;
+    color: white;
+}
 
-#btn-iniciar:hover { background-color: #27ae60; }
-#btn-pausar:hover { background-color: #d4ac0d; }
-#btn-zerar:hover { background-color: #c0392b; }
+/* Verde */
+#btn-pausar {
+    background-color: #f1c40f;
+    color: white;
+}
+
+/* Amarelo */
+#btn-zerar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Vermelho */
+
+#btn-iniciar:hover {
+    background-color: #27ae60;
+}
+
+#btn-pausar:hover {
+    background-color: #d4ac0d;
+}
+
+#btn-zerar:hover {
+    background-color: #c0392b;
+}
 
 /* Quando a tela do aparelho for menor que 420 pixels (tamanho de celular) */
 @media (max-width: 420px) {
     .cronometro-container {
-        padding: 20px 15px; /* Diminui a margem interna para sobrar mais espaço */
-        width: 90%;         /* A caixinha passa a ocupar 90% da largura da tela */
+        padding: 20px 15px;
+        /* Diminui a margem interna para sobrar mais espaço */
+        width: 90%;
+        /* A caixinha passa a ocupar 90% da largura da tela */
+        margin: 0 auto;
+        /* Zera em cima/baixo e centraliza perfeitamente nas laterais */
     }
+}
 
-    .display {
-        font-size: 2.2rem;  /* Diminui um pouco o tamanho dos números */
-    }
+.display {
+    font-size: 2.2rem;
+    /* Diminui um pouco o tamanho dos números */
+}
 
-    .display span {
-        width: 50px;        /* Reduz a largura das "gavetas" invisíveis dos números */
-    }
-    
-    h2 {
-        font-size: 1.2rem;  /* Diminui um pouco o título superior */
-    }
+.display span {
+    width: 50px;
+    /* Reduz a largura das "gavetas" invisíveis dos números */
+}
 
-    .botoes {
-        display: flex;          /* Garante que o flex está ativo aqui também */
-        flex-direction: column; /* Força os botões a ficarem em coluna (empilhados) */
-        width: 100%;            /* Faz o grupo de botões usar toda a largura disponível */
-        gap: 10px;              /* Dica extra: cria um espacinho show entre os botões empilhados */
-    }
+h2 {
+    font-size: 1.2rem;
+    /* Diminui um pouco o título superior */
+}
 
-    button {
-        width: 100%;            /* Faz cada botão ocupar a linha inteira */
-        padding: 14px;          /* Deixa o botão mais gordinho, melhor para tocar com o dedo */
-    }
+.botoes {
+    display: flex;
+    /* Garante que o flex está ativo aqui também */
+    flex-direction: column;
+    /* Força os botões a ficarem em coluna (empilhados) */
+    width: 100%;
+    /* Faz o grupo de botões usar toda a largura disponível */
+    gap: 10px;
+    /* Dica extra: cria um espacinho show entre os botões empilhados */
+}
+
+button {
+    width: 100%;
+    /* Faz cada botão ocupar a linha inteira */
+    padding: 14px;
+    /* Deixa o botão mais gordinho, melhor para tocar com o dedo */
 }
